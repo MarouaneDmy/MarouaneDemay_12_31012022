@@ -14,7 +14,6 @@ export default function EditButton(props) {
     const firstName = user.firstName;
     const lastName = user.lastName;
 
-
     const edit = async (e) => {
         e.preventDefault();
         const newName = await editUsers(newFirstName, newLastName)

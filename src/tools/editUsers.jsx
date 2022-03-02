@@ -14,6 +14,7 @@ export default async function editUsers(firstName, lastName) {
         }, config)
         .then((response) => {
             const user = response.data.body
+            console.log(response)
             return user
         })
         .catch((error) => {
