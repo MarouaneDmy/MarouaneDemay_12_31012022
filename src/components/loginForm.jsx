@@ -20,9 +20,7 @@ export default function LoginForm(props) {
           return setInvalidFields("Please fill fields correctly");
         } else {
             const token = await getToken(email, password)
-            console.log(token)
             const user = await getUserProfile(token)
-            console.log(user)
             setTokenExist(token)
             dispatch(login(user))
         }

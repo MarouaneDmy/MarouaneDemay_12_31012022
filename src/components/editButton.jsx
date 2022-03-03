@@ -26,14 +26,6 @@ export default function EditButton(props) {
             <h1>Welcome back<br/>{firstName} {lastName}!</h1>
             {editName ? (
             <div className="edit-button-div">
-                <input
-                    className="edit-button"
-                    type="button"
-                    onClick={() => {
-                    setEditName(true);
-                    }}
-                    value="Edit Name"
-                />
                 <div>
                     <input
                         className="edit-input"

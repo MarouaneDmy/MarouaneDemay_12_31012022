@@ -13,7 +13,6 @@ export default function HeaderUser(props) {
 
     const handleSignOut = (e) => {
         e.preventDefault()
-        localStorage.removeItem("token")
         dispatch(logout())
         navigate('/')
     }
