@@ -25,52 +25,55 @@ export default function EditButton(props) {
         <div className="header">
             <h1>Welcome back<br/>{firstName} {lastName}!</h1>
             {editName ? (
-            <div>
-            <input
-                className="edit-button"
-                type="button"
-                onClick={() => {
-                setEditName(true);
-                }}
-                value="Edit Name"
-            />
-            <input
-                className="edit-input"
-                value={newFirstName}
-                placeholder={firstName}
-                type="text"
-                onChange={(e) => {
-                setNewFirstName(e.target.value);
-                }}
-            />
-            <input
-                className="edit-input"
-                value={newLastName}
-                placeholder={lastName}
-                type="text"
-                onChange={(e) => {
-                setNewLastName(e.target.value);
-                }}
-            />
-            <button
-                className="edit-button"
-                type="submit"
-                value="Save"
-                onClick={edit}
-            >
-                Save
-            </button>
-
-            <button
-                className="edit-button"
-                type="button"
-                value="Cancel"
-                onClick={() => {
-                setEditName(false);
-                }}
-            >
-                Cancel
-            </button>
+            <div className="edit-button-div">
+                <input
+                    className="edit-button"
+                    type="button"
+                    onClick={() => {
+                    setEditName(true);
+                    }}
+                    value="Edit Name"
+                />
+                <div>
+                    <input
+                        className="edit-input"
+                        value={newFirstName}
+                        placeholder={firstName}
+                        type="text"
+                        onChange={(e) => {
+                        setNewFirstName(e.target.value);
+                        }}
+                    />
+                    <input
+                        className="edit-input"
+                        value={newLastName}
+                        placeholder={lastName}
+                        type="text"
+                        onChange={(e) => {
+                        setNewLastName(e.target.value);
+                        }}
+                    />
+                </div>
+                <div>
+                    <button
+                        className="edit-button"
+                        type="submit"
+                        value="Save"
+                        onClick={edit}
+                    >
+                        Save
+                    </button>
+                    <button
+                        className="edit-button"
+                        type="button"
+                        value="Cancel"
+                        onClick={() => {
+                        setEditName(false);
+                        }}
+                    >
+                        Cancel
+                    </button>
+                </div>
             </div>
         ) : (
             <input
